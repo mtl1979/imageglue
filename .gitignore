@@ -1,0 +1,14 @@
+*.bak
+*.qm
+*.sdf
+*.sln
+*.VC.opendb
+*.vcxproj
+*.vcxproj.filters
+*_wrapper.bat
+.vs
+debug
+Makefile
+Makefile.debug
+Makefile.release
+release

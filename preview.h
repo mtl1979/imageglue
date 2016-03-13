@@ -1,0 +1,26 @@
+#include <qlabel.h>
+#include <qwidget.h>
+
+class MainWindow;
+
+class Preview : public QWidget
+{
+	Q_OBJECT
+
+public:
+	Preview(QWidget * parent = NULL, Qt::WindowFlags flags = Qt::WindowFlags());
+	~Preview();
+
+	void SetImageSize(int w, int h);
+	void ShowPreview(MainWindow * window);
+
+private slots:
+	void SaveImage();
+
+private:
+	void resizeEvent(QResizeEvent *);
+
+	int _width, _height;
+	QImage * image;
+	QLabel * img;
+};
