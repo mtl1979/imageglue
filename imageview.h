@@ -23,6 +23,7 @@ protected:
 	QLineEdit *offsetX, *offsetY;
 	QLineEdit *cropTopX, *cropTopY;
 	QLineEdit *cropBottomX, *cropBottomY;
+	QLineEdit *scale;
 
 private:
 	void resizeEvent(QResizeEvent *);

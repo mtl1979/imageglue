@@ -56,6 +56,7 @@ void Preview::ShowPreview(MainWindow * window)
 
 		for (int x = 0; x < window->list->count(); x++)
 		{
+			QLocale loc;
 			ImageView * view = window->list->item(x)->data(Qt::UserRole).value<ImageView *>();
 			int top = view->offsetY->text().toInt();
 			int left = view->offsetX->text().toInt();
@@ -63,10 +64,23 @@ void Preview::ShowPreview(MainWindow * window)
 			int cropleft = view->cropTopX->text().toInt();
 			int cropbottom = view->cropBottomY->text().toInt();
 			int cropright = view->cropBottomX->text().toInt();
+			double scale = loc.toDouble(view->scale->text());
 			int iwidth = view->image->width();
 			int iheight = view->image->height();
 
-			painter.drawImage(left, top, *(view->image), cropleft, croptop, iwidth - cropleft - cropright, iheight - croptop - cropbottom);
+			QImage sub;
+
+			if (cropleft != 0 || cropright != 0 || croptop != 0 || cropbottom != 0)
+				sub = view->image->copy(cropleft, croptop, iwidth - cropleft - cropright, iheight - croptop - cropbottom);
+			else
+				sub = *view->image;
+
+			if (scale != 0.0)
+			{
+				sub = sub.scaled(lrint((double)sub.width()*scale), lrint((double)sub.height()*scale), Qt::KeepAspectRatio, Qt::SmoothTransformation);
+			}
+
+			painter.drawImage(left, top, sub);
 		}
 
 		QImage preview = image->scaled(img->width(), img->height(), Qt::KeepAspectRatio);

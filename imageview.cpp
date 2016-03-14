@@ -2,9 +2,11 @@
 
 #include <qgridlayout.h>
 #include <qlineedit.h>
+#include <qvalidator.h>
 
 ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags)
 {
+	QLocale loc;
 	image = NULL;
 	setWindowTitle(tr("Image Viewer"));
 	resize(640, 400);
@@ -34,6 +36,7 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	Q_CHECK_PTR(offsetX);
 	offsetX->setMaxLength(5);
 	offsetX->setText("0");
+	offsetX->setValidator(new QIntValidator());
 	offsetX->setMaximumHeight(20);
 	gridLayout->addWidget(offsetX, 2, 1);
 
@@ -47,6 +50,7 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	Q_CHECK_PTR(offsetY);
 	offsetY->setMaxLength(5);
 	offsetY->setText("0");
+	offsetY->setValidator(new QIntValidator());
 	offsetY->setMaximumHeight(20);
 	gridLayout->addWidget(offsetY, 2, 3);
 
@@ -74,6 +78,7 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	Q_CHECK_PTR(cropTopX);
 	cropTopX->setMaxLength(5);
 	cropTopX->setText("0");
+	cropTopX->setValidator(new QIntValidator());
 	cropTopX->setMaximumHeight(20);
 	gridLayout->addWidget(cropTopX, 5, 1);
 
@@ -87,6 +92,7 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	Q_CHECK_PTR(cropTopY);
 	cropTopY->setMaxLength(5);
 	cropTopY->setText("0");
+	cropTopY->setValidator(new QIntValidator());
 	cropTopY->setMaximumHeight(20);
 	gridLayout->addWidget(cropTopY, 5, 3);
 
@@ -108,6 +114,7 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	Q_CHECK_PTR(cropBottomX);
 	cropBottomX->setMaxLength(5);
 	cropBottomX->setText("0");
+	cropBottomX->setValidator(new QIntValidator());
 	cropBottomX->setMaximumHeight(20);
 	gridLayout->addWidget(cropBottomX, 7, 1);
 
@@ -121,8 +128,23 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	Q_CHECK_PTR(cropBottomY);
 	cropBottomY->setMaxLength(5);
 	cropBottomY->setText("0");
+	cropBottomY->setValidator(new QIntValidator());
 	cropBottomY->setMaximumHeight(20);
 	gridLayout->addWidget(cropBottomY, 7, 3);
+
+	QLabel * label12 = new QLabel();
+	Q_CHECK_PTR(label12);
+	label12->setText(tr("Scale"));
+	label12->setMaximumHeight(20);
+	gridLayout->addWidget(label12, 8, 0, 1, 2);
+
+	scale = new QLineEdit();
+	Q_CHECK_PTR(scale);
+	scale->setMaxLength(5);
+	scale->setText(QString("0") + loc.decimalPoint() + QString("000"));
+	scale->setValidator(new QDoubleValidator(0.001, 9.999, 3));
+	scale->setMaximumHeight(20);
+	gridLayout->addWidget(scale, 8, 2, 1, 2);
 
 }
 

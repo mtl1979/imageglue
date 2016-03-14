@@ -157,6 +157,7 @@ MainWindow::PreviewImage()
 	int maxw = 0, maxh = 0;
 	for (int x = 0; x < list->count(); x++)
 	{
+		QLocale loc;
 		ImageView * view = list->item(x)->data(Qt::UserRole).value<ImageView *>();
 		int top = view->offsetY->text().toInt();
 		int left = view->offsetX->text().toInt();
@@ -164,10 +165,18 @@ MainWindow::PreviewImage()
 		int cropleft = view->cropTopX->text().toInt();
 		int cropbottom = view->cropBottomY->text().toInt();
 		int cropright = view->cropBottomX->text().toInt();
-		int width = view->image->width();
-		int height = view->image->height();
-		width += left - cropleft - cropright;
-		height += top - croptop - cropbottom;
+		double scale = loc.toDouble(view->scale->text());
+		int width = left;
+		int height = top;
+		int subwidth = view->image->width() - cropleft - cropright;
+		int subheight = view->image->height() - croptop - cropbottom;
+		if (scale != 0.0)
+		{
+			subwidth *= scale;
+			subheight *= scale;
+		}
+		width += subwidth;
+		height += subheight;
 		if (width > maxw)
 			maxw = width;
 		if (height > maxh)

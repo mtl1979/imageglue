@@ -4,48 +4,53 @@
 <context>
     <name>ImageView</name>
     <message>
-        <location filename="imageview.cpp" line="9"/>
+        <location filename="imageview.cpp" line="11"/>
         <source>Image Viewer</source>
         <translation>Image Viewer</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="18"/>
+        <location filename="imageview.cpp" line="20"/>
         <source>No file!</source>
         <translation>No file!</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="23"/>
+        <location filename="imageview.cpp" line="25"/>
         <source>Offset:</source>
         <translation>Offset:</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="29"/>
-        <location filename="imageview.cpp" line="69"/>
-        <location filename="imageview.cpp" line="103"/>
+        <location filename="imageview.cpp" line="31"/>
+        <location filename="imageview.cpp" line="73"/>
+        <location filename="imageview.cpp" line="109"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="42"/>
-        <location filename="imageview.cpp" line="82"/>
-        <location filename="imageview.cpp" line="116"/>
+        <location filename="imageview.cpp" line="45"/>
+        <location filename="imageview.cpp" line="87"/>
+        <location filename="imageview.cpp" line="123"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="55"/>
+        <location filename="imageview.cpp" line="59"/>
         <source>Crop:</source>
         <translation>Crop:</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="63"/>
+        <location filename="imageview.cpp" line="67"/>
         <source>Top</source>
         <translation>Top</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="97"/>
+        <location filename="imageview.cpp" line="103"/>
         <source>Bottom</source>
         <translation>Bottom</translation>
+    </message>
+    <message>
+        <location filename="imageview.cpp" line="137"/>
+        <source>Scale</source>
+        <translation>Scale</translation>
     </message>
 </context>
 <context>
@@ -89,12 +94,12 @@
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="79"/>
+        <location filename="preview.cpp" line="93"/>
         <source>Save image...</source>
         <translation>Save image...</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="89"/>
+        <location filename="preview.cpp" line="103"/>
         <source>Couldn&apos;t save image!</source>
         <translation>Couldn&apos;t save image!</translation>
     </message>
