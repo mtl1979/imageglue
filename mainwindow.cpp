@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags flags) : QMainWindow(pa
 {
 	preview = NULL;
 	setWindowTitle("ImageGlue");
+	setWindowIcon(QIcon(":/ImageGlue.png"));
 	setAcceptDrops(true);
 	//
 	QWidget* widget = new QWidget(this);

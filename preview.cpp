@@ -15,6 +15,7 @@ Preview::Preview(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags
 {
 	image = NULL;
 	setWindowTitle(tr("Preview"));
+	setWindowIcon(QIcon(":/ImageGlue.png"));
 	//
 	QGridLayout * layout = new QGridLayout(this);
 	Q_CHECK_PTR(layout);

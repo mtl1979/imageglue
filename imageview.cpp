@@ -1,6 +1,7 @@
 #include "imageview.h"
 
 #include <qgridlayout.h>
+#include <qicon.h>
 #include <qlineedit.h>
 #include <qvalidator.h>
 
@@ -9,6 +10,7 @@ ImageView::ImageView(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, f
 	QLocale loc;
 	image = NULL;
 	setWindowTitle(tr("Image Viewer"));
+	setWindowIcon(QIcon(":/ImageGlue.png"));
 	resize(640, 400);
 	//
 

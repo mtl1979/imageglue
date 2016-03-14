@@ -4,51 +4,51 @@
 <context>
     <name>ImageView</name>
     <message>
-        <location filename="imageview.cpp" line="11"/>
+        <location filename="imageview.cpp" line="12"/>
         <source>Image Viewer</source>
         <translation>Kuvankatselija</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="20"/>
+        <location filename="imageview.cpp" line="22"/>
         <source>No file!</source>
         <translation>Ei tiedostoa!</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="25"/>
+        <location filename="imageview.cpp" line="27"/>
         <source>Offset:</source>
         <translation>Offset:</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="31"/>
-        <location filename="imageview.cpp" line="73"/>
-        <location filename="imageview.cpp" line="109"/>
+        <location filename="imageview.cpp" line="33"/>
+        <location filename="imageview.cpp" line="75"/>
+        <location filename="imageview.cpp" line="111"/>
         <source>X</source>
         <translation>X</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="45"/>
-        <location filename="imageview.cpp" line="87"/>
-        <location filename="imageview.cpp" line="123"/>
+        <location filename="imageview.cpp" line="47"/>
+        <location filename="imageview.cpp" line="89"/>
+        <location filename="imageview.cpp" line="125"/>
         <source>Y</source>
         <translation>Y</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="59"/>
+        <location filename="imageview.cpp" line="61"/>
         <source>Crop:</source>
         <translation>Rajaa:</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="67"/>
+        <location filename="imageview.cpp" line="69"/>
         <source>Top</source>
         <translation>Yläreuna</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="103"/>
+        <location filename="imageview.cpp" line="105"/>
         <source>Bottom</source>
         <translation>Alareuna</translation>
     </message>
     <message>
-        <location filename="imageview.cpp" line="137"/>
+        <location filename="imageview.cpp" line="139"/>
         <source>Scale</source>
         <translation>Skaalaa</translation>
     </message>
@@ -56,27 +56,27 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.cpp" line="35"/>
+        <location filename="mainwindow.cpp" line="36"/>
         <source>Images:</source>
         <translation>Kuvat:</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="45"/>
+        <location filename="mainwindow.cpp" line="46"/>
         <source>Add</source>
         <translation>Lisää</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="51"/>
+        <location filename="mainwindow.cpp" line="52"/>
         <source>Preview</source>
         <translation>Esikatsele</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="58"/>
+        <location filename="mainwindow.cpp" line="59"/>
         <source>Remove</source>
         <translation>Poista</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="99"/>
+        <location filename="mainwindow.cpp" line="100"/>
         <source>Open image...</source>
         <translation>Avaa kuva...</translation>
     </message>
@@ -84,7 +84,7 @@
 <context>
     <name>Preview</name>
     <message>
-        <location filename="preview.cpp" line="29"/>
+        <location filename="preview.cpp" line="30"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
@@ -94,12 +94,12 @@
         <translation>Esikatsele</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="93"/>
+        <location filename="preview.cpp" line="94"/>
         <source>Save image...</source>
         <translation>Tallenna kuva...</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="103"/>
+        <location filename="preview.cpp" line="104"/>
         <source>Couldn&apos;t save image!</source>
         <translation>Ei voitu tallentaa kuvaa!</translation>
     </message>
