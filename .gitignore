@@ -6,6 +6,7 @@
 *.VC.opendb
 *.vcxproj
 *.vcxproj.filters
+*.vcxproj.user
 *_wrapper.bat
 .vs
 debug
