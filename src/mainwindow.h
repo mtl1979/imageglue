@@ -9,6 +9,8 @@ public:
 	MainWindow(QWidget *parent = NULL, Qt::WindowFlags flags = Qt::WindowFlags());
 	~MainWindow();
 
+	void AddFile(const QString &);
+
 private slots:
 	void AddImage();
 	void RemoveImage();
@@ -22,7 +24,6 @@ protected:
 private:
 	void LoadSettings();
 	void SaveSettings();
-	void AddFile(const QString &);
 	void closeEvent(QCloseEvent *);
 	void dragEnterEvent(QDragEnterEvent *);
 	void dropEvent(QDropEvent *);

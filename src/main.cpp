@@ -137,5 +137,13 @@ NoTranslation:
 
 	window->show();
 
+	if (app.arguments().count() > 1)
+	{
+		for (int x = 1; x < app.arguments().count(); x++)
+		{
+			window->AddFile(app.arguments().at(x));
+		}
+	}
+
 	return app.exec();
 }
