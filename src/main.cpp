@@ -1,6 +1,8 @@
 #include <QtWidgets/qapplication.h>
+#include <QtWidgets/qfiledialog.h>
+
 #include <qdir.h>
-#include <qfiledialog.h>
+
 #include <qtranslator.h>
 
 #ifdef _WIN32
@@ -12,6 +14,7 @@
 
 #include "mainwindow.h"
 #include "util.h"
+
 QString gAppDir;
 #ifdef _WIN32
 QString gDataDir;
@@ -37,37 +40,10 @@ SetWorkingDirectory(const char *app)
 		}
 	}
 }
-#else
-QString
-GetAppDirectory()
-{
-	// we have to use some Windows API to get our path...
-	wchar_t * name = new wchar_t[MAX_PATH];	// maximum size for Win32 filenames
-	Q_CHECK_PTR(name);
-	if (GetModuleFileName(NULL,				/* current apps module */
-							name,			/* buffer */
-							MAX_PATH		/* buffer length */
-							) != 0)
-	{
-		qDebug("Module filename: %ls", name);
-		PathRemoveFileSpec(name);
-		if (SetCurrentDirectory(name) == 0)
-		{
-			GetCurrentDirectory(MAX_PATH, name);
-			qDebug("Current directory: %ls", name);
-		}
-		else
-			qDebug("Application directory: %ls", name);
-	}
-	QString qname = QString::fromWCharArray(name);
-	delete [] name;
-	name = NULL; // <postmaster@raasu.org> 20021027
-	return qname;
-}
 #endif
 
 int
-main( int argc, char**argv )
+main( int argc, char** argv )
 {
 	QApplication app( argc, argv );
 	QTranslator qtr( 0 );
@@ -76,13 +52,12 @@ main( int argc, char**argv )
 	// Set our working directory
 
 #ifdef _WIN32
-	QString appdir = GetAppDirectory();
 	QString datadir = qgetenv("APPDATA");
 	QDir dir(datadir);
 	dir.mkdir("ImageGlue");
 	datadir = MakePath(datadir, "ImageGlue");
 	gDataDir = datadir;
-	gAppDir = appdir;
+	gAppDir = QDir::toNativeSeparators(app.applicationDirPath());
 	// Set our working directory
 	QDir::setCurrent(datadir);
 #endif

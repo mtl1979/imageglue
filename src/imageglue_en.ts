@@ -107,7 +107,7 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="main.cpp" line="110"/>
+        <location filename="main.cpp" line="85"/>
         <source>Open translation file...</source>
         <translation>Open translation file...</translation>
     </message>
