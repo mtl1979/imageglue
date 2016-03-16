@@ -3,17 +3,22 @@
 #include "imageview.h"
 #include "global.h"
 
+#include <qapplication.h>
+#include <qdrag.h>
+#include <qevent.h>
 #include <qerrormessage.h>
 #include <qfiledialog.h>
 #include <qgridlayout.h>
 #include <qlabel.h>
 #include <qimage.h>
+#include <qmimedata.h>
 #include <qpainter.h>
 #include <qpushbutton.h>
 
 Preview::Preview(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags)
 {
 	image = NULL;
+	dragging = false;
 	setWindowTitle(tr("Preview"));
 	setWindowIcon(QIcon(":/ImageGlue.png"));
 	//
@@ -23,6 +28,7 @@ Preview::Preview(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags
 	img = new QLabel();
 	Q_CHECK_PTR(img);
 	img->setMaximumSize(800, 600);
+	img->installEventFilter(this);
 	layout->addWidget(img, 0, 0, 1, 3);
 
 	QPushButton *save = new QPushButton();
@@ -106,6 +112,27 @@ void Preview::SaveImage()
 	}
 }
 
+bool
+Preview::eventFilter(QObject *o, QEvent *e)
+{
+	if (o == img)
+	{
+		switch (e->type())
+		{
+		case QEvent::MouseButtonPress:
+			mousePressEvent((QMouseEvent *)e);
+			return true;
+		case QEvent::MouseMove:
+			mouseMoveEvent((QMouseEvent *)e);
+			return true;
+		case QEvent::MouseButtonRelease:
+			mouseReleaseEvent((QMouseEvent *)e);
+			return true;
+		}
+	}
+	return QWidget::eventFilter(o, e);
+}
+
 void Preview::resizeEvent(QResizeEvent *e)
 {
 	if (image)
@@ -114,4 +141,49 @@ void Preview::resizeEvent(QResizeEvent *e)
 		img->setPixmap(QPixmap::fromImage(preview));
 	}
 	QWidget::resizeEvent(e);
+}
+
+void Preview::mousePressEvent(QMouseEvent *e)
+{
+	if (e->button() & Qt::LeftButton)
+	{
+		qDebug("Started dragging...\n");
+		dragging = true;
+		startPos = e->pos();
+	}
+	QWidget::mousePressEvent(e);
+}
+
+void Preview::mouseMoveEvent(QMouseEvent *e)
+{
+	if (dragging)
+	{
+		QPoint currPos = e->pos();
+		if ((startPos - currPos).manhattanLength() > QApplication::startDragDistance())
+			startDrag();
+	}
+	QWidget::mouseMoveEvent(e);
+}
+
+void Preview::mouseReleaseEvent(QMouseEvent *e)
+{
+	if (dragging)
+	{
+		qDebug("Stopped dragging...\n");
+		dragging = false;
+	}
+	QWidget::mouseReleaseEvent(e);
+}
+
+void Preview::startDrag()
+{
+	if (image)
+	{
+		QDrag *drag = new QDrag(this);
+		QMimeData *mimeData = new QMimeData;
+		mimeData->setImageData(*image);
+		drag->setMimeData(mimeData);
+
+		drag->exec(Qt::CopyAction);
+	}
 }

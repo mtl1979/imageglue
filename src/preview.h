@@ -18,9 +18,18 @@ private slots:
 	void SaveImage();
 
 private:
+	bool eventFilter(QObject *, QEvent *);
+
 	void resizeEvent(QResizeEvent *);
+	void mousePressEvent(QMouseEvent *);
+	void mouseMoveEvent(QMouseEvent *);
+	void mouseReleaseEvent(QMouseEvent *);
+
+	void startDrag();
 
 	int _width, _height;
+	bool dragging;
+	QPoint startPos;
 	QImage * image;
 	QLabel * img;
 };

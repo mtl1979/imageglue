@@ -84,22 +84,22 @@
 <context>
     <name>Preview</name>
     <message>
-        <location filename="preview.cpp" line="30"/>
+        <location filename="preview.cpp" line="36"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="17"/>
+        <location filename="preview.cpp" line="22"/>
         <source>Preview</source>
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="94"/>
+        <location filename="preview.cpp" line="100"/>
         <source>Save image...</source>
         <translation>Save image...</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="104"/>
+        <location filename="preview.cpp" line="110"/>
         <source>Couldn&apos;t save image!</source>
         <translation>Couldn&apos;t save image!</translation>
     </message>
