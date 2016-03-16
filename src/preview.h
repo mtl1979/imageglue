@@ -16,6 +16,7 @@ public:
 
 private slots:
 	void SaveImage();
+	void CopyImage();
 
 private:
 	bool eventFilter(QObject *, QEvent *);

@@ -3,7 +3,9 @@
 #include "imageview.h"
 #include "global.h"
 
+#include <qaction.h>
 #include <qapplication.h>
+#include <qclipboard.h>
 #include <qdrag.h>
 #include <qevent.h>
 #include <qerrormessage.h>
@@ -29,7 +31,14 @@ Preview::Preview(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags
 	Q_CHECK_PTR(img);
 	img->setMaximumSize(800, 600);
 	img->installEventFilter(this);
+	img->setContextMenuPolicy(Qt::ActionsContextMenu);
 	layout->addWidget(img, 0, 0, 1, 3);
+
+	QAction *copyAct = new QAction(tr("Copy"), NULL);
+	Q_CHECK_PTR(copyAct);
+	copyAct->setShortcut(Qt::ControlModifier + Qt::Key_C);
+	connect(copyAct, SIGNAL(triggered()), this, SLOT(CopyImage()));
+	img->addAction(copyAct);
 
 	QPushButton *save = new QPushButton();
 	Q_CHECK_PTR(save);
@@ -185,5 +194,14 @@ void Preview::startDrag()
 		drag->setMimeData(mimeData);
 
 		drag->exec(Qt::CopyAction);
+	}
+}
+
+void Preview::CopyImage()
+{
+	if (image)
+	{
+		QClipboard *clipboard = QApplication::clipboard();
+		clipboard->setImage(*image);
 	}
 }
