@@ -1,3 +1,3 @@
 #include <qstring.h>
 
-static QString lastdir;
+extern QString gLastdir;

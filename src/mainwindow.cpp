@@ -68,15 +68,15 @@ void
 MainWindow::LoadSettings()
 {
 	QString filename = QString::null;
-	lastdir = QString::null;
+	gLastdir = QString::null;
 	QFile qf("imageglue.ini");
 	if (qf.open(QIODevice::ReadOnly))
 	{
 		QByteArray temp(256, 0);
 		if (qf.readLine(temp.data(), 255) > 0)
 		{
-			lastdir = QString::fromUtf8(temp);
-			lastdir.replace("\n", "");
+			gLastdir = QString::fromUtf8(temp);
+			gLastdir.replace("\n", "");
 		}
 		qf.close();
 	}
@@ -88,7 +88,7 @@ MainWindow::SaveSettings()
 	QFile qf("imageglue.ini");
 	if (qf.open(QIODevice::WriteOnly))
 	{
-		QByteArray temp = lastdir.toUtf8();
+		QByteArray temp = gLastdir.toUtf8();
 		qf.write(temp);
 		qf.close();
 	}
@@ -97,7 +97,7 @@ MainWindow::SaveSettings()
 void
 MainWindow::AddImage()
 {
-	QString file = QFileDialog::getOpenFileName(NULL, tr("Open image..."), lastdir, "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)");
+	QString file = QFileDialog::getOpenFileName(NULL, tr("Open image..."), gLastdir, "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)");
 	if (file != QString::null)
 	{
 		AddFile(file);
@@ -108,7 +108,7 @@ void
 MainWindow::AddFile(const QString & file)
 {
 	QFileInfo info(file);
-	lastdir = info.path();
+	gLastdir = info.path();
 	QString nfile = QDir::toNativeSeparators(file);
 	QImage image;
 	if (image.load(nfile))

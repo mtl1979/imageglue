@@ -16,6 +16,7 @@
 #include "util.h"
 
 QString gAppDir;
+QString gLastdir;
 #ifdef _WIN32
 QString gDataDir;
 #endif

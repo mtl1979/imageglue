@@ -106,11 +106,11 @@ void Preview::ShowPreview(MainWindow * window)
 
 void Preview::SaveImage()
 {
-	QString file = QFileDialog::getSaveFileName(NULL, tr("Save image..."), lastdir, "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)");
+	QString file = QFileDialog::getSaveFileName(NULL, tr("Save image..."), gLastdir, "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)");
 	if (file != QString::null)
 	{
 		QFileInfo info(file);
-		lastdir = info.path();
+		gLastdir = info.path();
 
 		if (!image->save(file))
 		{
