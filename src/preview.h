@@ -28,6 +28,7 @@ private:
 
 	void startDrag();
 
+	QString filename;
 	int _width, _height;
 	bool dragging;
 	QPoint startPos;

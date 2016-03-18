@@ -84,27 +84,27 @@
 <context>
     <name>Preview</name>
     <message>
-        <location filename="preview.cpp" line="45"/>
+        <location filename="preview.cpp" line="46"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="24"/>
+        <location filename="preview.cpp" line="25"/>
         <source>Preview</source>
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="37"/>
+        <location filename="preview.cpp" line="38"/>
         <source>Copy</source>
         <translation>Copy</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="109"/>
+        <location filename="preview.cpp" line="110"/>
         <source>Save image...</source>
         <translation>Save image...</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="119"/>
+        <location filename="preview.cpp" line="120"/>
         <source>Couldn&apos;t save image!</source>
         <translation>Couldn&apos;t save image!</translation>
     </message>
