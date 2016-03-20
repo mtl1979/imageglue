@@ -29,6 +29,16 @@ win32 {
 
 	qtimageformats.CONFIG += recursive
 	INSTALLS += qtimageformats
+
+	qtplatforms.path = ../../plugins/platforms
+	qtplatforms.files = $$[QT_INSTALL_PLUGINS]\\platforms\\qwindows.dll
+	qtplatforms.CONFIG += recursive
+	INSTALLS += qtplatforms
+
+	qtconf.path = ../..
+	qtconf.files = ../qt.conf
+	qtconf.CONFIG += recursive
+	INSTALLS += qtconf
 }
 
 target.path = ../..
