@@ -53,7 +53,7 @@ main( int argc, char** argv )
 	// Set our working directory
 
 #ifdef _WIN32
-	QString datadir = qgetenv("APPDATA");
+	QString datadir = QString::fromLocal8Bit(qgetenv("APPDATA").constData());
 	QDir dir(datadir);
 	dir.mkdir("ImageGlue");
 	datadir = MakePath(datadir, "ImageGlue");
@@ -128,7 +128,7 @@ NoTranslation:
 	// Qt's own translator file
 	QFileInfo qfi(lfile);
 	QString qt_lang = QString::null;
-	QString qtdir = qgetenv("QTDIR");
+	QString qtdir = QString::fromLocal8Bit(qgetenv("QTDIR").constData());
 	langfile = qfi.fileName().replace(QRegExp("imageglue"), "qt");
 
 	if (qtdir != QString::null)
