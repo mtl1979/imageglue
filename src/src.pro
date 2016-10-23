@@ -4,7 +4,7 @@ GUID={DBFAD74C-D75C-3B14-919A-C77651A75A23}
 SOURCES = main.cpp mainwindow.cpp imageview.cpp preview.cpp util.cpp
 HEADERS = mainwindow.h imageview.h preview.h
 TRANSLATIONS = imageglue_en.ts imageglue_fi.ts
-QT += widgets
+QT += widgets svg
 CONFIG += lrelease lupdate
 RESOURCES = imageglue.qrc
 win32 {
@@ -12,6 +12,7 @@ win32 {
 	RC_FILE = imageglue.rc
 	qtlibs.files = $$[QT_INSTALL_LIBS]\\Qt5Core.dll \
 			       $$[QT_INSTALL_LIBS]\\Qt5Gui.dll \
+			       $$[QT_INSTALL_LIBS]\\Qt5Svg.dll \
 			       $$[QT_INSTALL_LIBS]\\Qt5Widgets.dll \
 			       $$[QT_INSTALL_LIBS]\\libGLESv2.dll
 	qtlibs.path = ../..

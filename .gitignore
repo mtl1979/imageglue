@@ -1,8 +1,11 @@
 *.aps
 *.bak
+*.exe
+*.msi
 *.qm
 *.sdf
 *.sln
+*.VC.db
 *.VC.opendb
 *.vcxproj
 *.vcxproj.filters
