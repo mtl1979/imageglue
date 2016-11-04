@@ -81,6 +81,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9E2019E364AF4E4EA5FA405BFAA8763B"
+        "OwnerKey" = "8:_947D2B9C3ECF400D9D1ACC07DE6E2AC5"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BBE74A9D6645492D80362413C861E602"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -635,7 +641,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ImageGlue"
         "ProductCode" = "8:{A3309C24-521F-4527-B040-1DF1FF512D2C}"
-        "PackageCode" = "8:{9236669A-5DC1-4BC2-B460-1F091298BC86}"
+        "PackageCode" = "8:{631F5AB5-C5D6-4E40-82F3-3680E4AD968D}"
         "UpgradeCode" = "8:{6EAA757E-866B-4262-BE11-3B4E0E25B47B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -645,7 +651,7 @@
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:Suomen Raasuyhteisö"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
+        "ARPHELPLINK" = "8:https://github.com/mtl1979/imageglue/issues"
         "Title" = "8:ImageGlue Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Suomen Raasuyhteisö"
@@ -676,6 +682,84 @@
                     "Transitive" = "11:FALSE"
                         "Keys"
                         {
+                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_8A852E0521A648949BA2F4280F59D20A"
+                            {
+                            "Name" = "8:Microsoft"
+                            "Condition" = "8:"
+                            "AlwaysCreate" = "11:FALSE"
+                            "DeleteAtUninstall" = "11:FALSE"
+                            "Transitive" = "11:FALSE"
+                                "Keys"
+                                {
+                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_32C628C74BD34B04A90AF51F8D2009F1"
+                                    {
+                                    "Name" = "8:Windows"
+                                    "Condition" = "8:"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "DeleteAtUninstall" = "11:FALSE"
+                                    "Transitive" = "11:FALSE"
+                                        "Keys"
+                                        {
+                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_072FE0D0764F401CB596DBD7088D9DD1"
+                                            {
+                                            "Name" = "8:CurrentVersion"
+                                            "Condition" = "8:"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "DeleteAtUninstall" = "11:FALSE"
+                                            "Transitive" = "11:FALSE"
+                                                "Keys"
+                                                {
+                                                    "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_1244BE7ED3224BBB88E0F007163A3C44"
+                                                    {
+                                                    "Name" = "8:App Paths"
+                                                    "Condition" = "8:"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "DeleteAtUninstall" = "11:FALSE"
+                                                    "Transitive" = "11:FALSE"
+                                                        "Keys"
+                                                        {
+                                                            "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_D528EEF4B22E42C5B1256C7F7D097AF7"
+                                                            {
+                                                            "Name" = "8:ImageGlue.exe"
+                                                            "Condition" = "8:"
+                                                            "AlwaysCreate" = "11:FALSE"
+                                                            "DeleteAtUninstall" = "11:TRUE"
+                                                            "Transitive" = "11:FALSE"
+                                                                "Keys"
+                                                                {
+                                                                }
+                                                                "Values"
+                                                                {
+                                                                    "{ADCFDA98-8FDD-45E4-90BC-E3D20B029870}:_739DC49834EF48219FB907BA1E8DCE0B"
+                                                                    {
+                                                                    "Name" = "8:"
+                                                                    "Condition" = "8:"
+                                                                    "Transitive" = "11:FALSE"
+                                                                    "ValueTypes" = "3:1"
+                                                                    "Value" = "8:\"[TARGETDIR]ImageGlue.exe\""
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        "Values"
+                                                        {
+                                                        }
+                                                    }
+                                                }
+                                                "Values"
+                                                {
+                                                }
+                                            }
+                                        }
+                                        "Values"
+                                        {
+                                        }
+                                    }
+                                }
+                                "Values"
+                                {
+                                }
+                            }
                             "{60EA8692-D2D5-43EB-80DC-7906BF13D6EF}:_B783B72B9FA8467391E2057CE2D31C94"
                             {
                             "Name" = "8:[Manufacturer]"
