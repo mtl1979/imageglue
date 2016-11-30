@@ -56,29 +56,39 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="mainwindow.cpp" line="36"/>
+        <location filename="mainwindow.cpp" line="38"/>
         <source>Images:</source>
         <translation>Kuvat:</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="46"/>
+        <location filename="mainwindow.cpp" line="48"/>
         <source>Add</source>
         <translation>Lisää</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="52"/>
+        <location filename="mainwindow.cpp" line="54"/>
+        <source>Background</source>
+        <translation>Tausta</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="60"/>
         <source>Preview</source>
         <translation>Esikatsele</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="59"/>
+        <location filename="mainwindow.cpp" line="67"/>
         <source>Remove</source>
         <translation>Poista</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="100"/>
+        <location filename="mainwindow.cpp" line="124"/>
         <source>Open image...</source>
         <translation>Avaa kuva...</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="224"/>
+        <source>Select fill color...</source>
+        <translation>Valitse täyttöväri...</translation>
     </message>
 </context>
 <context>

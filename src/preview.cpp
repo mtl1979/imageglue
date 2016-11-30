@@ -68,8 +68,8 @@ void Preview::ShowPreview(MainWindow * window)
 
 	if (image)
 	{
+		image->fill(window->fillColor()); // Do not use QPainter, as it doesn't work with transparent colors
 		QPainter painter(image);
-		painter.fillRect(0, 0, _width, _height, Qt::white);
 
 		for (int x = 0; x < window->list->count(); x++)
 		{

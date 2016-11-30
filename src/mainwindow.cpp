@@ -4,6 +4,7 @@
 #include "global.h"
 
 #include <QtWidgets/qapplication.h>
+#include <QtWidgets/qcolordialog.h>
 #include <QtWidgets/qfiledialog.h>
 #include <QtWidgets/qgridlayout.h>
 #include <QtWidgets/qlabel.h>
@@ -20,6 +21,7 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags flags) : QMainWindow(pa
 	setWindowTitle("ImageGlue");
 	setWindowIcon(QIcon(":/ImageGlue.png"));
 	setAcceptDrops(true);
+	fFillColor = QColor(Qt::white);
 	//
 	QWidget* widget = new QWidget(this);
 	Q_CHECK_PTR(widget);
@@ -39,7 +41,7 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags flags) : QMainWindow(pa
 	list = new QListWidget();
 	Q_CHECK_PTR(list);
 	connect(list, SIGNAL(itemSelectionChanged()), this, SLOT(ListSelectionChanged()));
-	gridLayout->addWidget(list, 1, 0, 1, 3);
+	gridLayout->addWidget(list, 1, 0, 1, 4);
 
 	QPushButton *add = new QPushButton();
 	Q_CHECK_PTR(add);
@@ -47,18 +49,24 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags flags) : QMainWindow(pa
 	gridLayout->addWidget(add, 2, 0);
 	connect(add, SIGNAL(clicked()), this, SLOT(AddImage()));
 
+	QPushButton *background = new QPushButton();
+	Q_CHECK_PTR(background);
+	background->setText(tr("Background"));
+	gridLayout->addWidget(background, 2, 1);
+	connect(background, SIGNAL(clicked()), this, SLOT(SetBackground()));
+
 	fPreview = new QPushButton();
 	Q_CHECK_PTR(fPreview);
 	fPreview->setText(tr("Preview"));
 	fPreview->setEnabled(false);
-	gridLayout->addWidget(fPreview, 2, 1);
+	gridLayout->addWidget(fPreview, 2, 2);
 	connect(fPreview, SIGNAL(clicked()), this, SLOT(PreviewImage()));
 
 	fRemove = new QPushButton();
 	Q_CHECK_PTR(fRemove);
 	fRemove->setText(tr("Remove"));
 	fRemove->setEnabled(false);
-	gridLayout->addWidget(fRemove, 2, 2);
+	gridLayout->addWidget(fRemove, 2, 3);
 	connect(fRemove, SIGNAL(clicked()), this, SLOT(RemoveImage()));
 
 	LoadSettings();
@@ -78,6 +86,18 @@ MainWindow::LoadSettings()
 			gLastdir = QString::fromUtf8(temp);
 			gLastdir.replace("\n", "");
 		}
+		if (qf.readLine(temp.data(), 255) > 0)
+		{
+			QString tmp = QString::fromUtf8(temp);
+			tmp.replace("\n", "");
+			fFillColor = QColor(tmp);
+		}
+		if (qf.readLine(temp.data(), 255) > 0)
+		{
+			QString tmp = QString::fromUtf8(temp);
+			tmp.replace("\n", "");
+			fFillColor.setAlpha(tmp.toInt());
+		}
 		qf.close();
 	}
 }
@@ -90,6 +110,10 @@ MainWindow::SaveSettings()
 	{
 		QByteArray temp = gLastdir.toUtf8();
 		qf.write(temp);
+		qf.write("\n");
+		qf.write(fFillColor.name().toUtf8());
+		qf.write("\n");
+		qf.write(QString::number(fFillColor.alpha()).toUtf8());
 		qf.close();
 	}
 }
@@ -191,6 +215,16 @@ MainWindow::PreviewImage()
 		preview->SetImageSize(maxw, maxh);
 		preview->ShowPreview(this);
 		preview->show();
+	}
+}
+
+void
+MainWindow::SetBackground()
+{
+	QColor fillcolor = QColorDialog::getColor(fFillColor, this, tr("Select fill color..."), QColorDialog::ShowAlphaChannel);
+	if (fillcolor.isValid())
+	{
+		fFillColor = fillcolor;
 	}
 }
 

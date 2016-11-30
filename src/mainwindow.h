@@ -11,10 +11,13 @@ public:
 
 	void AddFile(const QString &);
 
+	const QColor& fillColor() { return fFillColor; }
+
 private slots:
 	void AddImage();
 	void RemoveImage();
 	void PreviewImage();
+	void SetBackground();
 	void ListSelectionChanged();
 
 protected:
@@ -30,4 +33,5 @@ private:
 
 	Preview *preview;
 	QPushButton *fPreview, *fRemove;
+	QColor fFillColor;
 };
