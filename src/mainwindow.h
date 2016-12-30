@@ -1,4 +1,5 @@
 #include <QtWidgets/qmainwindow.h>
+#include <QtWidgets/qcheckbox.h>
 #include <QtWidgets/qlistwidget.h>
 #include <QtWidgets/qpushbutton.h>
 
@@ -32,6 +33,7 @@ private:
 	void dropEvent(QDropEvent *);
 
 	Preview *preview;
+	QCheckBox *fAutoBorder;
 	QPushButton *fPreview, *fRemove;
 	QColor fFillColor;
 };

@@ -43,30 +43,34 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags flags) : QMainWindow(pa
 	connect(list, SIGNAL(itemSelectionChanged()), this, SLOT(ListSelectionChanged()));
 	gridLayout->addWidget(list, 1, 0, 1, 4);
 
+	fAutoBorder = new QCheckBox(tr("Automatic borders"));
+	Q_CHECK_PTR(fAutoBorder);
+	gridLayout->addWidget(fAutoBorder, 2, 0, 1, 4);
+
 	QPushButton *add = new QPushButton();
 	Q_CHECK_PTR(add);
 	add->setText(tr("Add"));
-	gridLayout->addWidget(add, 2, 0);
+	gridLayout->addWidget(add, 3, 0);
 	connect(add, SIGNAL(clicked()), this, SLOT(AddImage()));
 
 	QPushButton *background = new QPushButton();
 	Q_CHECK_PTR(background);
 	background->setText(tr("Background"));
-	gridLayout->addWidget(background, 2, 1);
+	gridLayout->addWidget(background, 3, 1);
 	connect(background, SIGNAL(clicked()), this, SLOT(SetBackground()));
 
 	fPreview = new QPushButton();
 	Q_CHECK_PTR(fPreview);
 	fPreview->setText(tr("Preview"));
 	fPreview->setEnabled(false);
-	gridLayout->addWidget(fPreview, 2, 2);
+	gridLayout->addWidget(fPreview, 3, 2);
 	connect(fPreview, SIGNAL(clicked()), this, SLOT(PreviewImage()));
 
 	fRemove = new QPushButton();
 	Q_CHECK_PTR(fRemove);
 	fRemove->setText(tr("Remove"));
 	fRemove->setEnabled(false);
-	gridLayout->addWidget(fRemove, 2, 3);
+	gridLayout->addWidget(fRemove, 3, 3);
 	connect(fRemove, SIGNAL(clicked()), this, SLOT(RemoveImage()));
 
 	LoadSettings();
@@ -98,6 +102,12 @@ MainWindow::LoadSettings()
 			tmp.replace("\n", "");
 			fFillColor.setAlpha(tmp.toInt());
 		}
+		if (qf.readLine(temp.data(), 255) > 0)
+		{
+			QString tmp = QString::fromUtf8(temp);
+			tmp.replace("\n", "");
+			fAutoBorder->setChecked(tmp == "true");
+		}
 		qf.close();
 	}
 }
@@ -114,6 +124,8 @@ MainWindow::SaveSettings()
 		qf.write(fFillColor.name().toUtf8());
 		qf.write("\n");
 		qf.write(QString::number(fFillColor.alpha()).toUtf8());
+		qf.write("\n");
+		qf.write(fAutoBorder->isChecked() ? "true" : "false");
 		qf.close();
 	}
 }
@@ -180,6 +192,7 @@ MainWindow::PreviewImage()
 		return;
 
 	int maxw = 0, maxh = 0;
+	int borderx = INT_MAX, bordery = INT_MAX;
 	for (int x = 0; x < list->count(); x++)
 	{
 		QLocale loc;
@@ -195,6 +208,16 @@ MainWindow::PreviewImage()
 		int height = top;
 		int subwidth = view->image->width() - cropleft - cropright;
 		int subheight = view->image->height() - croptop - cropbottom;
+
+		if (top < bordery)
+		{
+			bordery = top;
+		}
+		if (left < borderx)
+		{
+			borderx = left;
+		}
+
 		if (scale != 0.0)
 		{
 			subwidth *= scale;
@@ -207,6 +230,19 @@ MainWindow::PreviewImage()
 		if (height > maxh)
 			maxh = height;
 	}
+
+	if (fAutoBorder->isChecked())
+	{
+		if (borderx > 0 && borderx < INT_MAX)
+		{
+			maxw += borderx;
+		}
+		if (bordery > 0 && bordery < INT_MAX)
+		{
+			maxh += bordery;
+		}
+	}
+
 	if (preview == NULL)
 		preview = new Preview();
 

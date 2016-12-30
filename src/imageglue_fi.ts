@@ -61,32 +61,37 @@
         <translation>Kuvat:</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="48"/>
+        <location filename="mainwindow.cpp" line="46"/>
+        <source>Automatic borders</source>
+        <translation>Automaattiset reunat</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="52"/>
         <source>Add</source>
         <translation>Lisää</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="54"/>
+        <location filename="mainwindow.cpp" line="58"/>
         <source>Background</source>
         <translation>Tausta</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="60"/>
+        <location filename="mainwindow.cpp" line="64"/>
         <source>Preview</source>
         <translation>Esikatsele</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="67"/>
+        <location filename="mainwindow.cpp" line="71"/>
         <source>Remove</source>
         <translation>Poista</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="124"/>
+        <location filename="mainwindow.cpp" line="136"/>
         <source>Open image...</source>
         <translation>Avaa kuva...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="224"/>
+        <location filename="mainwindow.cpp" line="260"/>
         <source>Select fill color...</source>
         <translation>Valitse täyttöväri...</translation>
     </message>

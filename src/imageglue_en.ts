@@ -61,32 +61,37 @@
         <translation>Images:</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="48"/>
+        <location filename="mainwindow.cpp" line="46"/>
+        <source>Automatic borders</source>
+        <translation>Automatic borders</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="52"/>
         <source>Add</source>
         <translation>Add</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="54"/>
+        <location filename="mainwindow.cpp" line="58"/>
         <source>Background</source>
         <translation>Background</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="60"/>
+        <location filename="mainwindow.cpp" line="64"/>
         <source>Preview</source>
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="67"/>
+        <location filename="mainwindow.cpp" line="71"/>
         <source>Remove</source>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="124"/>
+        <location filename="mainwindow.cpp" line="136"/>
         <source>Open image...</source>
         <translation>Open image...</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="224"/>
+        <location filename="mainwindow.cpp" line="260"/>
         <source>Select fill color...</source>
         <translation>Select fill color...</translation>
     </message>
