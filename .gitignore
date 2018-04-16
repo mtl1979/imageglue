@@ -11,6 +11,7 @@
 *.vcxproj.filters
 *.vcxproj.user
 *_wrapper.bat
+.qmake.stash
 .vs
 debug
 Makefile

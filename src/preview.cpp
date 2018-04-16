@@ -2,6 +2,7 @@
 #include "mainwindow.h"
 #include "imageview.h"
 #include "global.h"
+#include "platform.h"
 
 #include <qaction.h>
 #include <qapplication.h>
@@ -142,6 +143,7 @@ Preview::eventFilter(QObject *o, QEvent *e)
 		case QEvent::MouseButtonRelease:
 			mouseReleaseEvent((QMouseEvent *)e);
 			return true;
+		default: ;; /* Pass through */
 		}
 	}
 	return QWidget::eventFilter(o, e);

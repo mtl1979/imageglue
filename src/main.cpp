@@ -34,9 +34,9 @@ SetWorkingDirectory(const char *app)
 		{
 			strncpy(chd, app, wdir - app);
 			chd[wdir - app] = 0;
-			PRINT("Setting working directory to: %s\n", chd);
+			qDebug("Setting working directory to: %s\n", chd);
 			if (chdir(chd) != 0)
-				PRINT("Setting working directory failed!\n");
+				qDebug("Setting working directory failed!\n");
 			delete [] chd;
 		}
 	}

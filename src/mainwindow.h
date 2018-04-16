@@ -3,6 +3,8 @@
 #include <QtWidgets/qlistwidget.h>
 #include <QtWidgets/qpushbutton.h>
 
+class Preview;
+
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT

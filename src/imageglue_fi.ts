@@ -99,27 +99,27 @@
 <context>
     <name>Preview</name>
     <message>
-        <location filename="preview.cpp" line="46"/>
+        <location filename="preview.cpp" line="47"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="25"/>
+        <location filename="preview.cpp" line="26"/>
         <source>Preview</source>
         <translation>Esikatsele</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="38"/>
+        <location filename="preview.cpp" line="39"/>
         <source>Copy</source>
         <translation>Kopioi</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="110"/>
+        <location filename="preview.cpp" line="111"/>
         <source>Save image...</source>
         <translation>Tallenna kuva...</translation>
     </message>
     <message>
-        <location filename="preview.cpp" line="120"/>
+        <location filename="preview.cpp" line="121"/>
         <source>Couldn&apos;t save image!</source>
         <translation>Ei voitu tallentaa kuvaa!</translation>
     </message>
