@@ -127,9 +127,7 @@ inline struct tm * localtime_r(const time_t *clock, struct tm *result)
 #else
 # if !defined(ssize_t)
 #  if defined(_MSC_VER)
-#   if _MSC_VER >= 1800
-typedef SSIZE_T ssize_t;
-#   elif defined(_M_AMD64)
+#   if defined(_M_AMD64)
 typedef __int64 ssize_t;
 #   else
 typedef int ssize_t;
