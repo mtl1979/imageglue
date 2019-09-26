@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_37E0F928CCF44DBB838649158BF64175"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_56CC515EA40C4B58B3BF782DF7B80AD2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -112,12 +106,6 @@
         "Entry"
         {
         "MsmKey" = "8:_D8459900DF6F4E469A89CBF9DFC47B78"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DB29EC2C3ADF49AAAD9C8D9EEA78E211"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -226,26 +214,6 @@
             "TargetName" = "8:qt.conf"
             "Tag" = "8:"
             "Folder" = "8:_ACDA2B30F2A44071997CEB220D650446"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_37E0F928CCF44DBB838649158BF64175"
-            {
-            "SourcePath" = "8:C:\\qt5\\qtbase\\plugins\\imageformats\\qtga.dll"
-            "TargetName" = "8:qtga.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_C4BBE2AA2886446ABCCD65D186F25C7C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -466,26 +434,6 @@
             "TargetName" = "8:imageglue.ico"
             "Tag" = "8:"
             "Folder" = "8:_ACDA2B30F2A44071997CEB220D650446"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DB29EC2C3ADF49AAAD9C8D9EEA78E211"
-            {
-            "SourcePath" = "8:C:\\qt5\\qtbase\\plugins\\imageformats\\qtiff.dll"
-            "TargetName" = "8:qtiff.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_C4BBE2AA2886446ABCCD65D186F25C7C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"

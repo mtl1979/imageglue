@@ -6,51 +6,51 @@
     <message>
         <location filename="imageview.cpp" line="12"/>
         <source>Image Viewer</source>
-        <translation>Kuvankatselija</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="22"/>
         <source>No file!</source>
-        <translation>Ei tiedostoa!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="27"/>
         <source>Offset:</source>
-        <translation>Offset:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="33"/>
         <location filename="imageview.cpp" line="75"/>
         <location filename="imageview.cpp" line="111"/>
         <source>X</source>
-        <translation>X</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="47"/>
         <location filename="imageview.cpp" line="89"/>
         <location filename="imageview.cpp" line="125"/>
         <source>Y</source>
-        <translation>Y</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="61"/>
         <source>Crop:</source>
-        <translation>Rajaa:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="69"/>
         <source>Top</source>
-        <translation>Yläreuna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="105"/>
         <source>Bottom</source>
-        <translation>Alareuna</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="139"/>
         <source>Scale</source>
-        <translation>Skaalaa</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -58,70 +58,70 @@
     <message>
         <location filename="mainwindow.cpp" line="38"/>
         <source>Images:</source>
-        <translation>Kuvat:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="46"/>
         <source>Automatic borders</source>
-        <translation>Automaattiset reunat</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="52"/>
         <source>Add</source>
-        <translation>Lisää</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="58"/>
         <source>Background</source>
-        <translation>Tausta</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="64"/>
         <source>Preview</source>
-        <translation>Esikatsele</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="71"/>
         <source>Remove</source>
-        <translation>Poista</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="136"/>
         <source>Open image...</source>
-        <translation>Avaa kuva...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="260"/>
         <source>Select fill color...</source>
-        <translation>Valitse täyttöväri...</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Preview</name>
     <message>
-        <location filename="preview.cpp" line="47"/>
-        <source>Save</source>
-        <translation>Tallenna</translation>
-    </message>
-    <message>
         <location filename="preview.cpp" line="26"/>
         <source>Preview</source>
-        <translation>Esikatsele</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preview.cpp" line="39"/>
         <source>Copy</source>
-        <translation>Kopioi</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preview.cpp" line="47"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preview.cpp" line="111"/>
         <source>Save image...</source>
-        <translation>Tallenna kuva...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preview.cpp" line="121"/>
         <source>Couldn&apos;t save image!</source>
-        <translation>Ei voitu tallentaa kuvaa!</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -129,7 +129,7 @@
     <message>
         <location filename="main.cpp" line="103"/>
         <source>Open translation file...</source>
-        <translation>Avaa käännöstiedosto...</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -6,51 +6,51 @@
     <message>
         <location filename="imageview.cpp" line="12"/>
         <source>Image Viewer</source>
-        <translation>Image Viewer</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="22"/>
         <source>No file!</source>
-        <translation>No file!</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="27"/>
         <source>Offset:</source>
-        <translation>Offset:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="33"/>
         <location filename="imageview.cpp" line="75"/>
         <location filename="imageview.cpp" line="111"/>
         <source>X</source>
-        <translation>X</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="47"/>
         <location filename="imageview.cpp" line="89"/>
         <location filename="imageview.cpp" line="125"/>
         <source>Y</source>
-        <translation>Y</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="61"/>
         <source>Crop:</source>
-        <translation>Crop:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="69"/>
         <source>Top</source>
-        <translation>Top</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="105"/>
         <source>Bottom</source>
-        <translation>Bottom</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="imageview.cpp" line="139"/>
         <source>Scale</source>
-        <translation>Scale</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -58,70 +58,70 @@
     <message>
         <location filename="mainwindow.cpp" line="38"/>
         <source>Images:</source>
-        <translation>Images:</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="46"/>
         <source>Automatic borders</source>
-        <translation>Automatic borders</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="52"/>
         <source>Add</source>
-        <translation>Add</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="58"/>
         <source>Background</source>
-        <translation>Background</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="64"/>
         <source>Preview</source>
-        <translation>Preview</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="71"/>
         <source>Remove</source>
-        <translation>Remove</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="136"/>
         <source>Open image...</source>
-        <translation>Open image...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="260"/>
         <source>Select fill color...</source>
-        <translation>Select fill color...</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Preview</name>
     <message>
-        <location filename="preview.cpp" line="47"/>
-        <source>Save</source>
-        <translation>Save</translation>
-    </message>
-    <message>
         <location filename="preview.cpp" line="26"/>
         <source>Preview</source>
-        <translation>Preview</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preview.cpp" line="39"/>
         <source>Copy</source>
-        <translation>Copy</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preview.cpp" line="47"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preview.cpp" line="111"/>
         <source>Save image...</source>
-        <translation>Save image...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preview.cpp" line="121"/>
         <source>Couldn&apos;t save image!</source>
-        <translation>Couldn&apos;t save image!</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -129,7 +129,7 @@
     <message>
         <location filename="main.cpp" line="103"/>
         <source>Open translation file...</source>
-        <translation>Open translation file...</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
