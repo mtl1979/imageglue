@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_2EE659BA0C7D470082E37A50BACE24AF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_56CC515EA40C4B58B3BF782DF7B80AD2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -75,12 +81,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9E2019E364AF4E4EA5FA405BFAA8763B"
-        "OwnerKey" = "8:_947D2B9C3ECF400D9D1ACC07DE6E2AC5"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_BBE74A9D6645492D80362413C861E602"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -94,6 +94,12 @@
         "Entry"
         {
         "MsmKey" = "8:_BF6F5BEF682F47EA9FCA22A5627CBD86"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C144AA1C53554D419F95F2B767CD1CC3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -214,6 +220,26 @@
             "TargetName" = "8:qt.conf"
             "Tag" = "8:"
             "Folder" = "8:_ACDA2B30F2A44071997CEB220D650446"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2EE659BA0C7D470082E37A50BACE24AF"
+            {
+            "SourcePath" = "8:C:\\qt5\\qtbase\\plugins\\iconengines\\qsvgicon.dll"
+            "TargetName" = "8:qsvgicon.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_4FF397B0C58A4F048035CF8367E68464"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -408,6 +434,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C144AA1C53554D419F95F2B767CD1CC3"
+            {
+            "SourcePath" = "8:C:\\qt5\\qtbase\\plugins\\styles\\qwindowsvistastyle.dll"
+            "TargetName" = "8:qwindowsvistastyle.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_15FD8942BEF642E58EE95AA8C505B0B4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D2B3587EAE8244FFA471352001856AEB"
             {
             "SourcePath" = "8:C:\\qt5\\qtbase\\bin\\Qt5Gui.dll"
@@ -524,6 +570,28 @@
                     "Property" = "8:_29853AA6EED84B81958B738EC561FE53"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_15FD8942BEF642E58EE95AA8C505B0B4"
+                            {
+                            "Name" = "8:styles"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_CD482F24527744B297687966E7DE11C1"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_4FF397B0C58A4F048035CF8367E68464"
+                            {
+                            "Name" = "8:iconengines"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_7DBECA0C61904A3B86AF4138C5FCB530"
+                                "Folders"
+                                {
+                                }
+                            }
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_5D6B174EDB8448A797386AAD9520ADFD"
                             {
                             "Name" = "8:platforms"
