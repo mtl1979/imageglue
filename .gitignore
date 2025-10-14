@@ -18,3 +18,7 @@ Makefile
 Makefile.debug
 Makefile.release
 release
+/build/
+/handler/
+/vcpkg_installed/
+/CMakeUserPresets.json

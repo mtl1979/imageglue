@@ -79,8 +79,8 @@ MainWindow::MainWindow(QWidget * parent, Qt::WindowFlags flags) : QMainWindow(pa
 void
 MainWindow::LoadSettings()
 {
-	QString filename = QString::null;
-	gLastdir = QString::null;
+	QString filename;
+	gLastdir.clear();
 	QFile qf("imageglue.ini");
 	if (qf.open(QIODevice::ReadOnly))
 	{
@@ -134,7 +134,7 @@ void
 MainWindow::AddImage()
 {
 	QString file = QFileDialog::getOpenFileName(NULL, tr("Open image..."), gLastdir, "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)");
-	if (file != QString::null)
+	if (!file.isEmpty())
 	{
 		AddFile(file);
 	}

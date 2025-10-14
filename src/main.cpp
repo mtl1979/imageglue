@@ -93,6 +93,13 @@ main( int argc, char** argv )
 			if (ld.exists("imageglue_en.qm"))
 			{
 				ldir = QDir::toNativeSeparators(ld.absolutePath());
+			} else if (ld.exists("translations"))
+			{
+				ld.cd("translations");
+				if (ld.exists("imageglue_en.qm"))
+				{
+					ldir = QDir::toNativeSeparators(ld.absolutePath());
+				}
 			}
 		}
 	}
@@ -127,20 +134,20 @@ NoTranslation:
 
 	// Qt's own translator file
 	QFileInfo qfi(lfile);
-	QString qt_lang = QString::null;
+   QString qt_lang;
 	QString qtdir = QString::fromLocal8Bit(qgetenv("QTDIR").constData());
-	langfile = qfi.fileName().replace(QRegExp("imageglue"), "qt");
+	langfile = qfi.fileName().replace("imageglue", "qt");
 
-	if (qtdir != QString::null)
+	if (!qtdir.isEmpty())
 	{
 		QString tr_dir = MakePath(qtdir, "translations");
 		qt_lang = MakePath(tr_dir, langfile);
 		if (!QFile::exists(qt_lang))
-			qt_lang = QString::null;
+			qt_lang.clear();
 	}
 
 	// Try using same directory as Image Splitter's translations
-	if (qt_lang == QString::null)
+	if (qt_lang.isEmpty())
 	{
 		qt_lang = MakePath(qfi.absolutePath(), langfile);
 	}

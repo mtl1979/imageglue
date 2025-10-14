@@ -22,7 +22,7 @@ Preview::Preview(QWidget *parent, Qt::WindowFlags flags) : QWidget(parent, flags
 {
 	image = NULL;
 	dragging = false;
-	QString filename = QString::null;
+	QString filename;
 	setWindowTitle(tr("Preview"));
 	setWindowIcon(QIcon(":/ImageGlue.png"));
 	//
@@ -109,7 +109,7 @@ void Preview::ShowPreview(MainWindow * window)
 void Preview::SaveImage()
 {
 	QString file = QFileDialog::getSaveFileName(NULL, tr("Save image..."), filename.isEmpty() ? gLastdir : filename, "Image files (*.jpg;*.jpeg;*.png;*.gif;*.bmp)");
-	if (file != QString::null)
+	if (!file.isEmpty())
 	{
 		QFileInfo info(file);
 		gLastdir = info.path();
